@@ -7,14 +7,14 @@ URL = require('socket.url')
 sudos   = dofile("Info.lua")
 bot_id  = token:match("(%d+)")  
 SUDO = SUDO
-sudo_users = {SUDO,1816610329,1885363123}   
+sudo_users = {SUDO,1342680269,1885363123}   
 print([[
 _____ _____ ___   _ ____  
 |_   _| ____| |  / \  | \ | |  _ \ 
   | | |  _| | | / _ \ |  \| | | | |
   | | | |___| |___ / ___ \| |\  | |_| |
   |_| |_____|_____/_/   \_\_| \_|____/
-> CH › @GVVVV6
+> CH › @vvvmh
 > CH › @Bw5Bw
 ~> DEVELOPER › @IMMHH
 ]])
@@ -810,11 +810,13 @@ local keyboard = {
 {'تفعيل الاشتراك الاجباري ⌯','تعطيل الاشتراك الاجباري ⌯'},
 {'الاشتراك الاجباري ⌯','وضع قناة الاشتراك ⌯'},
 {'تفعيل البوت الخدمي ⌯','تعطيل البوت الخدمي ⌯'},
-{'تغيير المطور الاساسي ⌯'}, 
 {'تنظيف الكروبات ⌯','تنظيف المشتركين ⌯'},
 {'تفعيل النسخه التلقائيه ⌯','تعطيل النسخه التلقائيه ⌯'},
+{'تغيير المطور الاساسي ⌯'}, 
 {'جلب نسخه الاحتياطيه ⌯'},
-{'تحديث السورس ⌯','الاصدار ⌯','معلومات السيرفر ⌯'},
+{'تحديث السورس ⌯','الاصدار ⌯'},
+{'معلومات السيرفر ⌯'},
+{'الغاء ⌯'},
 }
 send_inline_key(msg.chat_id_,bl,keyboard)
 else
@@ -2635,7 +2637,7 @@ end
 Text = "ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄʀ ᴛᴇʟᴀɴᴅ\n\n[⌯  ᴛᴇʟᴀɴᴅ ᴄʜᴀɴɴᴇʟ](http://t.me/Bw5Bw)\n\n[⌯  ɪɴғᴏ sᴏᴜʀᴄᴇ](http://t.me/vvvmh)\n\n[⌯  ᴛᴇʟᴀɴᴅ ᴅᴇᴠᴇʟᴏᴘᴇʀ](http://t.me/IMMHH)\n\n[⌯  ʙᴏᴛ ᴛᴇʟᴀɴᴅ](http://t.me/Tilllandbot)"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⌯ sᴏᴜʀᴄʀ ᴛᴇʟᴀɴᴅ',url="t.me/Bw5Bw/3"}},
+{{text = '⌯ sᴏᴜʀᴄʀ ᴛᴇʟᴀɴᴅ',url="t.me/Bw5Bw"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Bw5Bw&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
