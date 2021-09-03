@@ -70,7 +70,7 @@ RunBot:write([[
 cd $HOME/LanZo
 token="]]..database:get(Server_Done.."Token_Write")..[["
 rm -fr LanZo.lua
-wget "https://raw.githubusercontent.com/LanZo-DEV/LanZo/main/LanZo.lua"
+wget "https://raw.githubusercontent.com/LanZoxTeaM/LanZo/main/LanZo.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./LanZo.lua -p PROFILE --bot=$token
