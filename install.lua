@@ -1,10 +1,11 @@
-database = dofile("./library/redis.lua").connect("127.0.0.1", 6379)
+redis = require('redis') 
 https = require ("ssl.https") 
 serpent = dofile("./library/serpent.lua") 
 json = dofile("./library/JSON.lua") 
 JSON  = dofile("./library/dkjson.lua")
 URL = require('socket.url')  
-http = require("socket.http")
+utf8 = require ('lua-utf8') 
+database = redis.connect('127.0.0.1', 6379) 
 Server_Done = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a')
 User = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')
 IP = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*a'):gsub('[\n\r]+', '')
@@ -32,12 +33,12 @@ if res ~= 200 then
 io.write('\27[0;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n التوكن غير صحيح تاكد منه ثم ارسله')
 else
 io.write('\27[0;31m تم حفظ التوكن بنجاح \na┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n27[0;39;49m')
-database:set(Server_Done.."Token_Write",token) 
-end  
+database:set(Server_Done.."Token_Write",token)
+end 
 else
 io.write('\27[0;35m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ التوكن ارسل لي التوكن الان')
 end 
-os.execute('lua install.lua') 
+os.execute('lua install.lua')
 end
 if not database:get(Server_Done.."UserSudo_Write") then
 print('\27[0;35m\n ارسل لي ايدي المطور الاساسي ↓ :\na┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n\27[0;33;49m')
@@ -48,7 +49,7 @@ database:set(Server_Done.."UserSudo_Write",Id)
 else
 io.write('\27[0;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end
-os.execute('lua install.lua') 
+os.execute('lua install.lua')
 end
 if not database:get(Server_Done.."User_Write") then
 print('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n SEND ID FOR SIDO : \27[0;39;49m')
@@ -62,14 +63,14 @@ end
 os.execute('lua install.lua')
 end
 local function Files_Info_Get()
-Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"),database:get(Server_Done.."User_Write")) 
+Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"),database:get(Server_Done.."User_Write"))  
 local RunBot = io.open("LanZo", 'w')
 RunBot:write([[
 #!/usr/bin/env bash
 cd $HOME/LanZo
 token="]]..database:get(Server_Done.."Token_Write")..[["
 rm -fr LanZo.lua
-wget "https://raw.githubusercontent.com/LanZoTEAM/LanZo/main/LanZo.lua"
+wget "https://raw.githubusercontent.com/LanZo-DEV/LanZo/main/LanZo.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./LanZo.lua -p PROFILE --bot=$token
