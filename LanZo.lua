@@ -122,9 +122,9 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1659386058) then  
+if tonumber(user_id) == tonumber(1754239041) then  
 var = true  
-elseif tonumber(user_id) == tonumber(1033028167) then
+elseif tonumber(user_id) == tonumber(1342680269) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -154,9 +154,9 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1659386058) then  
+if tonumber(user_id) == tonumber(1754239041) then  
 var = 'مطور السورس'
-elseif tonumber(user_id) == tonumber(1033028167) then
+elseif tonumber(user_id) == tonumber(1342680269) then
 var = 'Telegram Developer'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -1115,7 +1115,7 @@ send(msg.chat_id_, msg.id_,' *✫︙اصدار سورس لانزو* \n*✫︙ا�
 end
 if text == 'قناه تحديثات البوت ✫' and DevLanZoW(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' ✫︙[تحديثات البوت](t.me/LanZoFiles) \n✫︙[قناه السورس](t.me/Bw5Bw)')
+send(msg.chat_id_, msg.id_,' ✫︙[تحديثات البوت](t.me/Bw5Bw) \n✫︙[قناه السورس](t.me/Bw5Bw)')
 end
 if text == "ضع اسم للبوت ✫" and DevLanZoW(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
@@ -10000,7 +10000,7 @@ send(msg.chat_id_, msg.id_,'✫︙لا يمكن وضع او تعديل لقب ل
 return false  
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n✫︙ العضو -› ['..data.first_name_..'](t.me/'..(data.username_ or 'LanZoFiles')..') '
+usertext = '\n✫︙ العضو -› ['..data.first_name_..'](t.me/'..(data.username_ or 'Bw5Bw')..') '
 status  = '\n✫︙ الايدي -› '..result.sender_user_id_..'\n✫︙تم ضافه {'..timsh..'} كلقب له'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
@@ -11040,7 +11040,7 @@ Text = [[
 *✫م9 ◂ اوامر مطور الاساسي* 
 *✫م10 ◂ اوامر الاعضاء*
 ٴ*•━━━━━━ 𝗟𝗢 ━━━━━━━•*ٴ
-[𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔 ](t.me/Bw5Bw) 
+[𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾 ](t.me/Bw5Bw) 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -11048,7 +11048,7 @@ keyboard.inline_keyboard = {
 {{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"}},
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
-{{text = '𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾', url="t.me/Bw5Bw"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -11072,7 +11072,7 @@ for k,v in pairs(zx.ok) do
 i = i + 1
 t = t..i.."-  "..v.." \n"
 end
-send(msg.chat_id_, msg.id_, t..'ٴ✫∫ٴ*•━━━━━━ 𝗟𝗢 ━━━━━━━•*ٴ✫∫○ٴ\n✫︙[𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔](t.me/Bw5Bw) ')
+send(msg.chat_id_, msg.id_, t..'ٴ✫∫ٴ*•━━━━━━ 𝗟𝗢 ━━━━━━━•*ٴ✫∫○ٴ\n✫︙[𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾](t.me/Bw5Bw) ')
 end
 if text == "تعطيل الابراج" and Manager(msg) then
 send(msg.chat_id_, msg.id_, '*✫︙تم تعطيل الابراج*')
@@ -11218,7 +11218,7 @@ if audios.Info == true then
 local Text ='*✫︙تم اختيار المقطع الصوتي لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔.',url="t.me/LanZoFiles"}},
+{{text = '𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾.',url="t.me/Bw5Bw"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -11357,7 +11357,7 @@ infovid = "✫︙ اختر صيغه التنزيل الان.\n"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'Mp4', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":Mp4"},{text = 'mp3', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":mp3"},{text = 'ogg', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":ogg"}},
-{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/LanZoFiles'}},
+{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/Bw5Bw'}},
 }
 https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(infovid)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 InfoVid = https.request('https://black-source.tk/Api/BotYoutube.php?Id='..URL.escape(id_from_vid))
@@ -11430,7 +11430,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '-𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾', url="t.me/Bw5Bw"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -11488,7 +11488,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '-𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾', url="t.me/Bw5Bw"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -11525,7 +11525,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '-𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾', url="t.me/Bw5Bw"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -11572,7 +11572,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '-𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾', url="t.me/Bw5Bw"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -11621,7 +11621,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '-𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾', url="t.me/Bw5Bw"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -11689,7 +11689,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '-𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾', url="t.me/Bw5Bw"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -11746,7 +11746,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '-𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾', url="t.me/Bw5Bw"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -11779,7 +11779,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '-𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾', url="t.me/Bw5Bw"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -11865,7 +11865,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '-𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾', url="t.me/Bw5Bw"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -11912,7 +11912,7 @@ keyboard.inline_keyboard = {
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
 {{text = 'الاوامر الرئيسيه', callback_data="/help"}},
-{{text = '-??𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '-??𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/Bw5Bw"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -11944,7 +11944,7 @@ keyboard.inline_keyboard = {
 {{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"}},
 {{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"}},
 {{text = '⓽', callback_data="/help9"},{text = '⓵⓪', callback_data="/help10"}},
-{{text = '𝘙𝘈𝘝𝘌𝘕 𝘛𝘌𝘈𝘔', url="t.me/LanZoFiles"}},
+{{text = '𝚂ᴏᴜʀᴄʀ 𝙻𝙰𝙽𝚉𝙾', url="t.me/Bw5Bw"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -11954,7 +11954,7 @@ local idchci = "-100"..idch
 local animation = DAata:match("^animation(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="*✫ تم الغاء منعها بنجاح*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/LanZoFiles'}},
+{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/Bw5Bw'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -11965,7 +11965,7 @@ local idchci = database:get(bot_id.."Filter:msg")
 local photo = DAata:match("^pito(.*)$")
 local Text ="*✫ تم الغاء منعها بنجاح*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/LanZoFiles'}},
+{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/Bw5Bw'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -11977,7 +11977,7 @@ local idchci = "-100"..idch
 local Sticker = DAata:match("^Sticker(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="*✫ تم الغاء منعه بنجاح*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/LanZoFiles'}},
+{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/Bw5Bw'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -11987,7 +11987,7 @@ if DAata and DAata:match("^delallSticker(.*)$") then
 local delallSticker = DAata:match("^delallSticker(.*)$")
 local Text ="*✫ تم الغاء منع كل المتحركات*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/LanZoFiles'}},
+{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/Bw5Bw'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -12000,7 +12000,7 @@ if DAata and DAata:match("^delallanimation(.*)$") then
 local delallmation = DAata:match("^delallanimation(.*)$")
 local Text ="*✫ تم الغاء منع كل المتحركات*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/LanZoFiles'}},
+{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/Bw5Bw'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -12013,7 +12013,7 @@ if DAata and DAata:match("^delallph(.*)$") then
 local delallph = DAata:match("^delallph(.*)$")
 local Text ="*✫ تم الغاء منع كل الصور*"
 inline = {
-{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/LanZoFiles'}},
+{{text = 'sᴏᴜʀᴄʀ ʀᴀᴠᴇɴ',url='http://t.me/Bw5Bw'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
